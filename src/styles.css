@@ -25,3 +25,11 @@
 .hover-transition {
     @apply transition-all duration-300
 }
+
+.btn {
+    @apply px-4 py-2 rounded-lg
+}
+
+.rtl {
+    direction: rtl;
+}

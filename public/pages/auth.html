@@ -1,0 +1,84 @@
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../packages/fontawesome/css/all.min.css">
+    <title>Laravel Shop Template With Tailwindcss</title>
+
+    <script type="text/javascript">
+        if (localStorage.themeMode === 'dark' || (!('themeMode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {  
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+
+<body class="rtl bg-white dark:bg-gray-900">
+
+    <main class="mt-16 lg:mx-56">
+
+        <section class="grid grid-rows-6 h-screen">
+            <div class="row-span-1"></div>
+            <div class="row-span-3 flex flex-col justify-center mb-10">
+                <div class="flex flex-col gap-y-4">
+                    <i class="fa-duotone fa-bag-shopping text-red-500 text-9xl"></i>
+                    <span class="text-center font-bold text-2xl md:text-3xl dark:text-white">فروشگاه اینترنتی لاراول</span>
+                </div>
+
+                <button href=""
+                    class="btn mt-4 bg-white dark:bg-gray-600 dark:text-gray-100 w-3/4 lg:w-2/5 hidden self-center justify-between items-center">
+                    <span class="text-xs lg:text-sm">ورود با گوگل</span>
+                    <img src="../images/google.svg" class="w-6" alt="">
+                </button>
+
+
+                <form class="hidden flex-col w-3/4 lg:w-2/5 mt-4 self-center" action="">
+                    <label class="text-xs text-gray-500 mb-2" for="">ایمیل</label>
+                    <input type="email"
+                        class="form-control block w-full px-3 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none"
+                        id="exampleFormControlInput1" placeholder="abc@example.com" />
+
+                    <button class="btn bg-red-500 text-white mt-2">ورود</button>
+                </form>
+
+                <form class="flex flex-col w-3/4 lg:w-2/5 mt-4 self-center" action="">
+                    <label class="text-xs text-gray-500 dark:text-gray-100 mb-2" for="">کد تایید</label>
+                    <div class="grid grid-cols-6 gap-x-2">
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+                        <input type="text" maxlength="1"
+                            class="col-span-1 text-center form-control block w-full px-1 py-2 text-base font-normal text-gray-700 dark:text-gray-100 bg-transparent bg-clip-padding border-2 border-solid rounded-lg transition ease-in-out m-0 focus:border-red-500 focus:outline-none" />
+
+                    </div>
+                    <button class="btn bg-red-500 text-white mt-2">تایید</button>
+
+                </form>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <footer class="w-full py-2">
+        <p class="text-slate-700 dark:text-gray-100 text-xs lg:text-sm w-full text-center">copyright 2022</p>
+    </footer>
+
+</body>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../packages/fontawesome/js/all.min.js"></script>
+<script src="../js/theme.js"></script>
+
+</html>
