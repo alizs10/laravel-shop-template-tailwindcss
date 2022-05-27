@@ -17,7 +17,7 @@
     </script>
 </head>
 
-<body class="rtl bg-white dark:bg-gray-900">
+<body class="rtl bg-white dark:bg-gray-900 dark:text-white">
 
     <header class="p-2 flex flex-col gap-y-2">
 
@@ -45,29 +45,134 @@
 
         <section class="grid grid-cols-12 gap-2">
             <div class="col-span-8 rounded-lg bg-gray-200 dark:bg-gray-700 grid grid-cols-12 gap-2 items-center">
+                <span class="col-span-2 text-lg text-gray-800 dark:text-gray-100 flex items-center justify-end">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
                 <input type="text"
                     class="col-span-10 bg-transparent px-2 py-2 focus:outline-none dark:text-gray-100 placeholder:text-xs"
                     placeholder="جستوجو در محصولات">
-                <span class="col-span-2 text-lg text-gray-800 dark:text-gray-100 flex items-center justify-end">
-                    <i class="fa-solid fa-magnifying-glass ml-2"></i>
-                </span>
             </div>
             <div class="col-span-4 flex justify-end gap-x-2 items-center">
                 <button
-                    class="text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                    class="hidden text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
                     <i class="fa-solid fa-right-to-bracket"></i>
+                </button>
+                <button
+                    class="text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fa-solid fa-user"></i>
                 </button>
                 <span class="text-gray-700 dark:text-gray-200 text-xl font-bold">/</span>
                 <button
-                    class="text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                    class="relative text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
                     <i class="fa-solid fa-basket-shopping-simple"></i>
+
+                    <div
+                        class="h-5 w-5 rounded-lg bg-red-600 text-white flex-center absolute -bottom-1 -right-1 text-xs">
+                        2</div>
                 </button>
             </div>
         </section>
 
     </header>
 
-    <footer class="bg-gray-100 relative shadow-md z-10 flex flex-col mt-12">
+    <main>
+
+        <!-- amazing sales starts -->
+        <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-red-500 text-white">
+            <div class="flex justify-between items-center text-base">
+                <span>تخفیف های شگفت انگیز</span>
+                <a href="" class="flex-center gap-x-2">
+                    <span>بیشتر</span>
+                    <i class="fa-duotone fa-arrow-left text-base"></i>
+                </a>
+            </div>
+
+            <div class="flex flex-row gap-x-2 overflow-x-scroll no-scrollbar">
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500">212,000</span>
+                            <span class="text-red-500">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500">212,000</span>
+                            <span class="text-red-500">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500">212,000</span>
+                            <span class="text-red-500">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- amazing sales ends -->
+
+
+    </main>
+
+    <footer class="bg-gray-100 dark:bg-gray-800 dark:text-white relative shadow-md z-10 flex flex-col mt-20">
         <div class="absolute -top-10 w-full flex justify-center z-0">
             <div class="h-10 w-5/6 bg-red-500 rounded-t-lg p-2">
                 <span class="text-white text-sm">فروشگاه اینترنتی لاراول</span>
