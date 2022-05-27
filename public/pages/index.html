@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ef4444">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../packages/fontawesome/css/all.min.css">
     <title>Laravel Shop Template With Tailwindcss</title>
@@ -17,7 +18,7 @@
     </script>
 </head>
 
-<body class="rtl bg-white dark:bg-gray-900 dark:text-white">
+<body class="rtl relative bg-white dark:bg-gray-900 dark:text-white">
 
     <header class="p-2 flex flex-col gap-y-2">
 
@@ -165,6 +166,83 @@
         </section>
 
     </header>
+
+    <aside class="fixed top-0 z-30 bottom-0 right-0 w-3/4 flex flex-col bg-white dark:bg-gray-900 overflow-y-scroll">
+        <div class="w-full py-3 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-red-500 font-bold flex items-center gap-x-4 text-xl mr-2">
+                <i class="fa-duotone fa-bag-shopping text-2xl"></i>
+                فروشگاه لاراول
+            </span>
+        </div>
+        
+        <span class="text-xs font-bold my-2 mr-2">منوهای اصلی</span>
+
+        <ul class="flex flex-col pb-2 border-b border-gray-100 text-gray-500 dark:text-gray-400 dark:border-gray-700">
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-basket-shopping text-lg"></i>
+                سوپرمارکت</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-badge-percent text-lg"></i>
+                کالاهای شگفت انگیز</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-fire text-lg"></i>
+               پرفروش ترین</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-shop text-lg"></i>
+                فروشنده شوید</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-briefcase text-lg"></i>
+                فرصت های شغلی</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-cart-plus text-lg"></i>
+                لاراول پلاس</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-messages-question text-lg"></i>
+                سوالات متداول</a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-square-info text-lg"></i>
+                درباره لاراول
+            </a>
+            <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
+                <i class="fa-regular fa-headset text-lg"></i>
+                ارتباط با ما</a>
+        </ul>
+
+        <span class="text-xs font-bold mt-2 mr-2">دسته بندی ها</span>
+
+        <ul class="flex flex-col mt-3">
+            <span class="flex flex-col items-center py-2 cursor-pointer">
+                <div class="flex justify-between w-full py-2 text-red-500">
+                    <span class="text-xs mr-2">کالاهای دیجیتال</span>
+                    <span class="ml-2 text-xs">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </span>
+                </div>
+            </span>
+
+            <ul class="w-full flex flex-col bg-gray-300 dark:bg-gray-800">
+                <span class="flex justify-between py-3 text-red-500 cursor-pointer">
+                    <span class="text-xs mr-6">گوشی و لوازم جانبی موبایل</span>
+                    <span class="ml-2 text-xs">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </span>
+                </span>
+                <ul class="w-full flex flex-col">
+                    <a href="" class="mr-10 text-xs py-3">گوشی موبایل</a>
+                    <a href="" class="mr-10 text-xs py-3">هندزفری</a>
+                    <a href="" class="mr-10 text-xs py-3">کابل شارژر و مبدل</a>
+                </ul>
+                <span class="flex justify-between py-3 cursor-pointer">
+                    <span class="text-xs mr-6">گوشی و لوزام جانبی موبایل</span>
+                    <span class="ml-2 text-xs">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                </span>
+                <a href="" class="mr-6 text-xs py-3">ساعت هوشمند</a>
+            </ul>
+
+        </ul>
+    </aside>
 
     <main>
 
@@ -558,6 +636,7 @@
 
     </footer>
 
+    <div class="fixed top-0 bottom-0 left-0 right-0 bg-gray-500/70 z-20"></div>
 </body>
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../packages/fontawesome/js/all.min.js"></script>
