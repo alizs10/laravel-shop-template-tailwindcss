@@ -24,7 +24,7 @@
 
         <section class="grid grid-cols-8 items-center">
             <div class="col-span-1 flex justify-start items-center">
-                <button
+                <button onclick="toggleSidebar()"
                     class="w-10 h-10 dark:text-white rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -167,7 +167,7 @@
 
     </header>
 
-    <aside class="fixed top-0 z-30 bottom-0 right-0 w-3/4 flex flex-col bg-white dark:bg-gray-900 overflow-y-scroll">
+    <aside class="fixed top-0 z-30 bottom-0 -right-full w-3/4 flex flex-col bg-white dark:bg-gray-900 transition-all duration-300 overflow-y-scroll">
         <div class="w-full py-3 border-b border-gray-100 dark:border-gray-700">
             <span class="text-red-500 font-bold flex items-center gap-x-4 text-xl mr-2">
                 <i class="fa-duotone fa-bag-shopping text-2xl"></i>
@@ -183,7 +183,7 @@
                 سوپرمارکت</a>
             <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
                 <i class="fa-regular fa-badge-percent text-lg"></i>
-                کالاهای شگفت انگیز</a>
+                تخفیف های شگفت انگیز</a>
             <a href="" class="text-sm flex items-center gap-x-4 py-2 mr-2">
                 <i class="fa-regular fa-fire text-lg"></i>
                پرفروش ترین</a>
@@ -636,10 +636,11 @@
 
     </footer>
 
-    <div class="fixed top-0 bottom-0 left-0 right-0 bg-gray-500/70 z-20"></div>
+    <div id="blur-back" onclick="toggleSidebar()" class="hidden fixed top-0 bottom-0 left-0 right-0 bg-gray-500/70 z-20 transition-all duration-300"></div>
 </body>
 <script src="../js/jquery-3.6.0.min.js"></script>
 <script src="../packages/fontawesome/js/all.min.js"></script>
 <script src="../js/theme.js"></script>
+<script src="../js/sidebar.js"></script>
 
 </html>
