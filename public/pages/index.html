@@ -20,7 +20,7 @@
 
 <body class="rtl relative bg-white dark:bg-gray-900 dark:text-white">
 
-    <header class="fixed lg:z-40 top-0 right-0 left-0 bg-white p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
+    <header class="fixed lg:z-40 top-0 right-0 left-0 bg-white dark:bg-gray-800 p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
 
         <section class="grid grid-cols-8 md:grid-cols-10 items-center">
             <div class="col-span-1 lg:hidden flex justify-start items-center">
@@ -37,7 +37,7 @@
 
             <div class="col-span-1 flex justify-end items-center">
                 <button
-                    class="w-10 h-10 text-gray-700 dark:text-gray-200 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800"
+                    class="w-10 h-10 text-gray-700 dark:text-gray-200 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-700"
                     onclick="toggleTheme()">
                     <span class="dark:hidden">
                         <i class="fa-solid fa-sun-bright"></i>
@@ -51,7 +51,7 @@
 
         <section class="grid grid-cols-12 gap-2">
             <div
-                class="lg:relative col-span-8 md:col-span-9 lg:col-span-10 rounded-lg bg-gray-200 dark:bg-gray-700 grid grid-cols-12 gap-2 items-center">
+                class="lg:relative col-span-8 md:col-span-9 rounded-lg bg-gray-200 dark:bg-gray-700 grid grid-cols-12 gap-2 items-center">
                 <span
                     class="col-span-2 lg:col-span-1 text-lg text-gray-800 dark:text-gray-100 flex items-center justify-end md:justify-start mr-4">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -106,12 +106,12 @@
 
                 <!-- search window ends -->
             </div>
-            <div class="col-span-4 md:col-span-3 lg:col-span-2 grid grid-cols-4 gap-x-2 items-center">
+            <div class="col-span-4 md:col-span-3 grid grid-cols-4 lg:flex lg:justify-end gap-x-2 items-center">
 
                 <div class="col-span-2 sm:col-span-3 flex justify-end">
 
                     <a href="#"
-                        class="flex-center text-gray-700 dark:text-gray-200 w-10 sm:w-fit sm:px-2 lg:px-4 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                        class="flex-center text-gray-700 dark:text-gray-200 w-10 sm:w-fit sm:px-2 lg:px-4 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-700">
 
                         <span class="flex-center gap-x-2">
                             <i class="fa-solid fa-right-to-bracket"></i>
@@ -124,7 +124,7 @@
 
                     <!-- user popup starts -->
                     <button id="user-popup-btn" onclick="userPopupToggle()"
-                        class="relative text-gray-700 dark:text-gray-200 w-10 sm:w-fit sm:px-2 lg:px-4 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                        class="relative text-gray-700 dark:text-gray-200 w-10 sm:w-fit sm:px-2 lg:px-4 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-700">
                         <span class="flex-center gap-x-2">
                             <i class="fa-solid fa-user"></i>
                             <span class="text-xs hidden sm:inline">علی سلیمانی</span>
@@ -160,7 +160,7 @@
 
                     <!-- cart popup starts -->
                     <button id="cart-popup-btn" onclick="cartPopupToggle()"
-                        class="relative text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-800">
+                        class="relative text-gray-700 dark:text-gray-200 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-700">
                         <i class="fa-solid fa-basket-shopping-simple"></i>
 
                         <div
@@ -241,60 +241,57 @@
     </header>
 
     <aside
-        class="fixed top-0 lg:top-24 lg:mt-2 z-30 bottom-0 lg:bottom-auto -right-full lg:right-0 w-3/4 sm:w-1/3 lg:w-full grid grid-cols-12 lg:justify-end lg:shadow-md bg-white dark:bg-gray-900 transition-all duration-300 overflow-y-scroll lg:overflow-visible">
-        <div class="lg:hidden col-span-12 py-3 border-b border-gray-100 dark:border-gray-700">
+        class="fixed top-0 lg:top-24 lg:mt-2 z-30 bottom-0 lg:bottom-auto -right-full lg:right-0 w-3/4 sm:w-1/3 lg:w-full grid grid-cols-12 lg:items-center lg:justify-end lg:shadow-md bg-white dark:bg-gray-800 transition-all duration-300 overflow-y-scroll lg:overflow-visible">
+        <div class="lg:hidden col-span-12 pt-2 pb-3  border-gray-100 dark:border-gray-700">
             <span class="text-red-500 font-bold flex items-center gap-x-4 text-xl mr-2">
                 <i class="fa-duotone fa-bag-shopping text-2xl"></i>
                 فروشگاه لاراول
             </span>
         </div>
 
-        <span class="lg:hidden col-span-12 text-xs font-bold my-2 mr-2">منوهای اصلی</span>
+        <span class="lg:hidden col-span-12 text-xs font-bold mr-2">منوهای اصلی</span>
 
         <ul
-            class="col-span-12 lg:col-span-11 lg:order-last flex flex-col lg:flex-row lg:gap-x-2 pb-2 lg:p-0 border-b lg:border-none border-gray-100 text-gray-500 dark:text-gray-400 dark:border-gray-700">
+            class="col-span-12 lg:col-span-11 lg:order-last flex flex-col lg:flex-row lg:gap-x-2 lg:p-0 border-b lg:border-none border-gray-100 text-gray-500 dark:text-gray-400 dark:border-gray-700 h-fit">
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-basket-shopping text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-basket-shopping text-lg lg:text-sm"></i>
                 سوپرمارکت</a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-badge-percent text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-badge-percent text-lg lg:text-sm"></i>
                 تخفیف های شگفت انگیز</a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-fire text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-fire text-lg lg:text-sm"></i>
                 پرفروش ترین</a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-shop text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-shop text-lg lg:text-sm"></i>
                 فروشنده شوید</a>
+          
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-briefcase text-lg"></i>
-                فرصت های شغلی</a>
-            <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-cart-plus text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-cart-plus text-lg lg:text-sm"></i>
                 لاراول پلاس</a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-messages-question text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-messages-question text-lg lg:text-sm"></i>
                 سوالات متداول</a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-square-info text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white dark:lg:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-square-info text-lg lg:text-sm"></i>
                 درباره لاراول
             </a>
             <a href=""
-                class="text-sm flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:hover-transition lg:hover:border-red-500">
-                <i class="fa-regular fa-headset text-lg"></i>
+                class="text-sm lg:text-xs flex items-center gap-x-4 lg:gap-x-2 py-2 lg:p-0 mr-2 lg:pb-2 lg:border-b-2 lg:border-white lg:dark:border-gray-800 lg:hover-transition lg:hover:border-red-500 dark:lg:hover:border-red-500">
+                <i class="fa-regular fa-headset text-lg lg:text-sm"></i>
                 ارتباط با ما</a>
         </ul>
 
-        <div class="col-span-12 lg:col-span-1">
+        <div class="col-span-12 lg:col-span-1 mt-3 lg:m-0">
             <span id="toggleCategories"
-                class="col-span-12 lg:col-span-1 lg:block lg:py-2 lg:text-center  text-xs font-bold lg:cursor-pointer lg:self-center border-l-2 border-b-2 border-gray-100">دسته
+                class="col-span-12 lg:col-span-1 lg:block lg:py-2 lg:text-center text-xs font-bold lg:cursor-pointer lg:self-center lg:border-l-2 lg:border-b-2 border-gray-100 dark:border-gray-800">دسته
                 بندی ها</span>
 
 
@@ -309,7 +306,7 @@
                             </span>
                         </div>
                     </span>
-                    <ul id="s-c-s-1" class="hidden w-full flex flex-col bg-gray-300 dark:bg-gray-800">
+                    <ul id="s-c-s-1" class="hidden w-full flex flex-col bg-gray-300 dark:bg-gray-900">
                         <span class="flex justify-between py-3 text-red-500 cursor-pointer">
                             <span class="text-xs mr-6">گوشی و لوازم جانبی موبایل</span>
                             <span class="ml-2 text-xs">
@@ -367,10 +364,10 @@
 
             <!-- categories for big screens -->
             <div id="categories" class="hidden absolute top-5 right-4 left-4 bottom-auto rounded-b-lg overflow-hidden
-            col-span-12 flex-col mt-3 lg:grid-cols-12 bg-white">
+            col-span-12 flex-col mt-3 lg:grid-cols-12 bg-white dark:bg-gray-800">
 
                 <!-- cats -->
-                <div class="flex flex-col col-span-3 bg-gray-100">
+                <div class="flex flex-col col-span-3 bg-gray-100 dark:bg-gray-900">
 
                     <span id="c-1"
                      class="cat cat-active flex flex-col items-center py-2 cursor-pointer hover-transition text-red-500">
@@ -427,7 +424,7 @@
 
     </aside>
 
-    <main class="md:mx-2 mt-40">
+    <main class="md:mx-2 mt-32 lg:mt-40">
 
         <!-- amazing sales starts -->
         <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-red-500 text-white">
