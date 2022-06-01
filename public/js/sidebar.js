@@ -47,3 +47,17 @@ $('.cat').hover(function () {
 
 }
 );
+
+$('.s-cat').click(function () {
+    let id = $(this).attr('id');
+    console.log(id);
+
+    id = id.slice(4, id.length);
+
+    $(this).toggleClass('text-red-500')
+    $(this).find('svg').toggleClass('fa-angle-left fa-angle-down')
+    console.log(id);
+    $('#s-c-s-' + id).toggleClass('hidden');
+
+}
+);
