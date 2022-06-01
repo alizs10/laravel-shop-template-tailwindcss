@@ -458,9 +458,11 @@
             <div id="categories" class="hidden absolute top-5 right-4 left-4 bottom-auto rounded-b-lg overflow-hidden
             col-span-12 flex-col mt-3 lg:grid-cols-12 bg-white">
 
+                <!-- cats -->
                 <div class="flex flex-col col-span-3 bg-gray-100">
 
-                    <span class="flex flex-col items-center py-2 cursor-pointer hover-transition hover:text-red-500">
+                    <span id="c-1"
+                     class="cat cat-active flex flex-col items-center py-2 cursor-pointer hover-transition text-red-500">
                         <div class="flex justify-between w-full py-2">
                             <span class="text-xs mr-2">کالاهای دیجیتال</span>
                             <span class="ml-2 text-xs">
@@ -468,7 +470,8 @@
                             </span>
                         </div>
                     </span>
-                    <span class="flex flex-col items-center py-2 cursor-pointer hover-transition hover:text-red-500">
+                    <span id="c-2"
+                     class="cat flex flex-col items-center py-2 cursor-pointer hover-transition">
                         <div class="flex justify-between w-full py-2">
                             <span class="text-xs mr-2">کالاهای دیجیتال</span>
                             <span class="ml-2 text-xs">
@@ -476,26 +479,13 @@
                             </span>
                         </div>
                     </span>
-                    <span class="flex flex-col items-center py-2 cursor-pointer hover-transition hover:text-red-500">
-                        <div class="flex justify-between w-full py-2">
-                            <span class="text-xs mr-2">کالاهای دیجیتال</span>
-                            <span class="ml-2 text-xs">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </span>
-                        </div>
-                    </span>
-                    <span class="flex flex-col items-center py-2 cursor-pointer hover-transition hover:text-red-500">
-                        <div class="flex justify-between w-full py-2">
-                            <span class="text-xs mr-2">کالاهای دیجیتال</span>
-                            <span class="ml-2 text-xs">
-                                <i class="fa-solid fa-angle-left"></i>
-                            </span>
-                        </div>
-                    </span>
+                  
                 </div>
+                <!-- cats -->
 
+                <!-- subs -->
                 <div class="col-span-9 grid grid-cols-9">
-                    <ul class="col-span-3 flex flex-col">
+                    <ul id="c-s-1" class="cat-sub c-s-active col-span-3 flex flex-col">
                         <span class="flex justify-between py-3 text-red-500 cursor-pointer">
                             <span class="text-xs mr-6">گوشی و لوازم جانبی موبایل</span>
                         </span>
@@ -505,12 +495,19 @@
                             <a href="" class="mr-10 text-xs py-3">کابل شارژر و مبدل</a>
                         </ul>
                     </ul>
-                   
-                   
-                    
-                   
-                    
+                    <ul id="c-s-2" class="cat-sub hidden col-span-3 flex flex-col">
+                        <span class="flex justify-between py-3 text-red-500 cursor-pointer">
+                            <span class="text-xs mr-6">یشبیسبشیب</span>
+                        </span>
+                        <ul class="w-full flex flex-col">
+                            <a href="" class="mr-10 text-xs py-3">شیبشیب</a>
+                            <a href="" class="mr-10 text-xs py-3">شسیب</a>
+                            <a href="" class="mr-10 text-xs py-3">ییبی</a>
+                        </ul>
+                    </ul>
+
                 </div>
+                <!-- subs -->
 
             </div>
             <!-- categories for big screens -->
