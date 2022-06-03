@@ -1,7 +1,11 @@
 $('#verification_code_form input')[0].focus();
 
-$('#verification_code_form input').on('input', function () {
-
+$('#verification_code_form input').on('input', function (event) {
+ 
+    if(isNaN($(this).val())) {
+        $(this).val('')
+        return;
+    }
     let id = $(this).attr('id')
     id = id.slice(4, id.length)
 
@@ -10,6 +14,7 @@ $('#verification_code_form input').on('input', function () {
     }
 
 })
+
 $('#verification_code_form input').on('keydown', function (event) {
 
     let id = $(this).attr('id')
