@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#ef4444">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../packages/fontawesome/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../packages/jquery-ui/jquery-ui.min.css"> -->
     <title>Laravel Shop Template With Tailwindcss</title>
 
     <script type="text/javascript">
@@ -20,7 +21,7 @@
 
 <body class="rtl relative bg-white dark:bg-gray-900 dark:text-white">
 
-    <header class="fixed lg:z-40 top-0 right-0 left-0 bg-white dark:bg-gray-800 p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
+    <header class="fixed z-10 lg:z-40 top-0 right-0 left-0 bg-white dark:bg-gray-800 p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
 
         <section class="grid grid-cols-8 md:grid-cols-10 items-center">
             <div class="col-span-1 lg:hidden flex justify-start items-center">
@@ -426,6 +427,24 @@
 
     <main class="md:mx-2 mt-32 lg:mt-40">
 
+        <!-- slidershow starts -->
+
+        <section class="relative z-0 w-full md:w-1/2 h-1/2 bg-white rounded-lg ltr overflow-hidden">
+
+            <div id="slidershow-imgs" class="w-full flex overflow-hidden">
+                <img id="slider-1" src="../images/product-1.jfif" class="w-full hidden" alt="">
+                <img id="slider-2" src="../images/product-2.webp" class="w-full active" alt="">
+                <img id="slider-3" src="../images/product-1.jfif" class="w-full hidden" alt="">
+            </div>
+
+            <div id="s-btns" class="absolute bottom-4 z-0 right-0 left-0 py-3 flex-center gap-x-2">
+                <span id="s-btn-1" class="transition-all duration-300 shadow-lg bg-white w-4 h-3 rounded-lg cursor-pointer"></span>
+                <span id="s-btn-2" class="transition-all duration-300 shadow-lg bg-red-500 w-4 h-3 rounded-lg cursor-pointer"></span>
+                <span id="s-btn-3" class="transition-all duration-300 shadow-lg bg-white w-4 h-3 rounded-lg cursor-pointer"></span>
+            </div>
+        </section>
+        <!-- slidershow ends -->
+
         <!-- amazing sales starts -->
         <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-red-500 text-white">
             <div class="flex justify-between items-center text-base">
@@ -823,11 +842,13 @@
     </div>
     <!-- background blur ends -->
 </body>
+
 <script src="../js/jquery-3.6.0.min.js"></script>
+<!-- <script src="../packages/jquery-ui/jquery-ui.min.js"></script> -->
 <script src="../packages/fontawesome/js/all.min.js"></script>
 <script src="../js/theme.js"></script>
 <script src="../js/sidebar.js"></script>
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
-
+<script src="../js/slidershow.js"></script>
 </html>
