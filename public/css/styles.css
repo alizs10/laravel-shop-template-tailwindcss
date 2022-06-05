@@ -811,6 +811,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: fit-content;
 }
 
+.h-1\/3{
+  height: 33.333333%;
+}
+
+.h-full{
+  height: 100%;
+}
+
 .h-3{
   height: 0.75rem;
 }
@@ -819,36 +827,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.75rem;
 }
 
-.h-24{
-  height: 6rem;
-}
-
 .h-1{
   height: 0.25rem;
-}
-
-.h-2\/3{
-  height: 66.666667%;
-}
-
-.h-1\/6{
-  height: 16.666667%;
-}
-
-.h-2{
-  height: 0.5rem;
-}
-
-.h-full{
-  height: 100%;
-}
-
-.h-1\/3{
-  height: 33.333333%;
-}
-
-.h-1\/2{
-  height: 50%;
 }
 
 .w-3\/4{
@@ -899,12 +879,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 83.333333%;
 }
 
-.w-1\/6{
-  width: 16.666667%;
-}
-
-.w-2\/3{
-  width: 66.666667%;
+.w-screen{
+  width: 100vw;
 }
 
 .shrink{
@@ -966,20 +942,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-2{
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
 .grid-rows-6{
   grid-template-rows: repeat(6, minmax(0, 1fr));
-}
-
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -988,6 +952,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .items-end{
@@ -1175,30 +1143,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .bg-gray-500\/70{
   background-color: rgb(107 114 128 / 0.7);
-}
-
-.bg-blue-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
-.bg-gradient-to-r{
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-indigo-500{
-  --tw-gradient-from: #6366f1;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(99 102 241 / 0));
-}
-
-.via-purple-500{
-  --tw-gradient-stops: var(--tw-gradient-from), #a855f7, var(--tw-gradient-to, rgb(168 85 247 / 0));
-}
-
-.to-pink-500{
-  --tw-gradient-to: #ec4899;
 }
 
 .bg-clip-padding{
@@ -1327,14 +1278,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-white{
@@ -1677,10 +1628,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mt-7{
     margin-top: 1.75rem;
-  }
-
-  .md\:h-1\/3{
-    height: 33.333333%;
   }
 
   .md\:h-2\/3{
