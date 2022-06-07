@@ -22,7 +22,7 @@
 <body class="rtl relative bg-white dark:bg-gray-900 dark:text-white">
 
     <header
-        class="fixed z-10 lg:z-40 top-0 right-0 left-0 bg-white dark:bg-gray-800 p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
+        class="fixed z-20 lg:z-40 top-0 right-0 left-0 bg-white dark:bg-gray-800 p-2 flex flex-col gap-y-2 shadow-md lg:shadow-none">
 
         <section class="grid grid-cols-8 md:grid-cols-10 items-center">
             <div class="col-span-1 lg:hidden flex justify-start items-center">
@@ -65,7 +65,7 @@
                 <!-- search window starts -->
 
                 <section id="search-window"
-                    class="hidden fixed lg:absolute top-0 right-0 bottom-0 lg:bottom-auto lg:pb-4 left-0 z-30 bg-white lg:rounded-lg dark:bg-gray-900 transition-all duration-300 lg:shadow-lg">
+                    class="hidden fixed lg:absolute z-30 top-0 right-0 bottom-0 lg:bottom-auto lg:pb-4 left-0 bg-white lg:rounded-lg dark:bg-gray-900 transition-all duration-300 lg:shadow-lg">
 
                     <div class="flex flex-col gap-y-4">
                         <div class="flex justify-between items-center">
@@ -429,14 +429,14 @@
 
         <!-- breadcrumb starts-->
         <section
-            class="px-2 py-4 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-white flex flex-wrap items-center gap-1 md:gap-2">
+            class="px-2 py-4 rounded-lg bg-gray-300 dark:bg-gray-700 dark:text-white flex flex-wrap items-center gap-1 md:gap-2">
 
             <a href="" class="text-xs md:text-base text-red-500">خانه</a>
             <i class="fa-light fa-angles-left text-xs md:text-sm"></i>
             <span href="" class="text-xs md:text-base text-red-500">محصولات</span>
             <i class="fa-light fa-angles-left text-xs md:text-sm"></i>
             <span href="" class="text-xs md:text-base text-red-500">کالاهای دیجیتال</span>
-           
+
 
         </section>
         <!-- breadcrumb ends -->
@@ -444,7 +444,7 @@
 
         <!-- product starts -->
 
-        <section class="mt-4 px-2 py-4 rounded-lg bg-gray-100 dark:bg-gray-800 dark:text-white flex flex-col gap-4">
+        <section class="mt-4 px-2 py-4 rounded-lg bg-gray-300 dark:bg-gray-700 dark:text-white flex flex-col gap-4">
 
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <span class="text-xs xs:text-base md:text-lg text-red-500">گوشی سامسونگ گلکسی S22 ULTRA</span>
@@ -511,7 +511,7 @@
                     <span class="mt-2 flex gap-x-2 items-center text-sm">
                         <span class="flex gap-x-1 items-center">
                             <i class="fa-regular fa-shield-check text-lg"></i>
-                           
+
                         </span>
 
                         <span>گارانتی اصالات و سلامت فیزیکی کالا</span>
@@ -519,15 +519,16 @@
                     <span class="mt-2 flex gap-x-2 items-center text-sm">
                         <span class="flex gap-x-1 items-center">
                             <i class="fa-regular fa-calendar-week text-lg"></i>
-                           
+
                         </span>
 
                         <span>ضمانت 7 روزه بازگشت کالا</span>
                     </span>
-                    <span class="mt-2 flex gap-x-2 items-center text-sm font-bold text-emerald-700 dark:text-emerald-600">
+                    <span
+                        class="mt-2 flex gap-x-2 items-center text-sm font-bold text-emerald-700 dark:text-emerald-600">
                         <span class="flex gap-x-1 items-center">
                             <i class="fa-regular fa-check-double text-lg"></i>
-                           
+
                         </span>
 
                         <span>موجود در انبار</span>
@@ -539,9 +540,311 @@
             </div>
 
 
+
+
         </section>
         <!-- product ends -->
 
+        <!-- related products starts -->
+        <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-gray-300 dark:bg-gray-700 text-white">
+            <div class="flex justify-between items-center text-black dark:text-white text-base">
+                <span>محصولات مرتبط</span>
+                <a href="" class="flex-center gap-x-2">
+                    <span>بیشتر</span>
+                    <i class="fa-duotone fa-arrow-left text-base"></i>
+                </a>
+            </div>
+
+            <div class="flex flex-row gap-x-2 overflow-x-scroll no-scrollbar">
+
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500 font-bold">212,000</span>
+                            <span class="text-red-500 font-bold">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500 font-bold">212,000</span>
+                            <span class="text-red-500 font-bold">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <img class="w-32" src="../images/product-1.jfif" alt="">
+                    <div class="flex justify-between items-center">
+                        <span class="flex flex-col gap-y-1 text-xs">
+                            <span class="flex gap-x-2 items-center">
+                                <span class="line-through">232,000</span>
+                                <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
+                                    2%</div>
+                            </span>
+                            <span class="text-red-500 font-bold">212,000</span>
+                            <span class="text-red-500 font-bold">تومان</span>
+                        </span>
+
+                        <div class="flex flex-col items-center gax-y-2">
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button
+                                class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
+                                <i class="fa-solid fa-cart-circle-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- related products ends -->
+
+        <!-- product introduction starts -->
+        <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-gray-300 dark:bg-gray-700 dark:text-white">
+
+            <div class="flex flex-col gap-2 mt-2 p-2 border border-gray-200 dark:border-gray-800 rounded-lg">
+                <span class="text-base flex flex-wrap gap-1">
+                    <span>معرفی</span>
+                    <span class="text-red-500">گوشی سامسونگ گلکسی S22 ULTRA</span>
+                </span>
+
+                <p class="text-justify text-xs leading-6">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+                    چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                    آینده،
+                    شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                    الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و
+                    دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+                    دستاوردهای
+                    اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن
+                    ساختگی
+                    با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                    مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف
+                    بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
+                    و
+                    متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
+                    و
+                    فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                    راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی
+                    سوالات
+                    پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                </p>
+            </div>
+            <div class="flex flex-col gap-2 mt-2 p-2 border border-gray-200 dark:border-gray-800 rounded-lg">
+                <span class="text-base flex flex-wrap gap-1">
+                    <span>ویژگی ها</span>
+                </span>
+
+                <div class="grid grid-cols-5">
+                    <div class="col-span-2 flex flex-col gap-2">
+                        <ol class="rounded-r-lg overflow-hidden">
+                            <li class="bg-gray-200 dark:bg-gray-800 dark: p-2">
+                                <span class="text-xs">
+                                    وزن
+                                </span>
+                            </li>
+                            <li class="bg-gray-200 dark:bg-gray-800 dark: p-2">
+                                <span class="text-xs">
+                                    رنگ
+                                </span>
+                            </li>
+                            <li class="bg-gray-200 dark:bg-gray-800 dark: p-2">
+                                <span class="text-xs">
+                                    RAM
+                                </span>
+                            </li>
+                            <li class="bg-gray-200 dark:bg-gray-800 dark: p-2">
+                                <span class="text-xs">
+                                    حافظه داخلی
+                                </span>
+                            </li>
+                            <li class="bg-gray-200 dark:bg-gray-800 dark: p-2">
+                                <span class="text-xs">
+                                    نمایشگر
+                                </span>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-span-3 flex flex-col gap-2">
+                        <div class="col-span-1 flex flex-col gap-2">
+                            <ol class="rounded-l-lg overflow-hidden">
+                                <li class="bg-gray-100 dark:bg-gray-600 p-2">
+                                    <span class="text-xs">
+                                        250 گرم
+                                    </span>
+                                </li>
+                                <li class="bg-gray-100 dark:bg-gray-600 p-2">
+                                    <span class="text-xs">
+                                        خاکستری
+                                    </span>
+                                </li>
+                                <li class="bg-gray-100 dark:bg-gray-600 p-2">
+                                    <span class="text-xs">
+                                        8 گیگابایت
+                                    </span>
+                                </li>
+                                <li class="bg-gray-100 dark:bg-gray-600 p-2">
+                                    <span class="text-xs">
+                                        256 گیگابایت
+                                    </span>
+                                </li>
+                                <li class="bg-gray-100 dark:bg-gray-600 p-2">
+                                    <span class="text-xs">
+                                        SUPER AMOLED
+                                    </span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- product introduction ends -->
+
+        <!-- comments starts -->
+        <section class="flex flex-col gap-y-2 p-2 rounded-lg mt-4 bg-gray-300 dark:bg-gray-700 dark:text-white">
+            <span class="text-base flex flex-wrap gap-1">
+                <span>نظرات کاربران (36 نظر)</span>
+            </span>
+
+            <div class="flex flex-col gap-2">
+
+
+                <div class="p-2 rounded-lg bg-white dark:bg-gray-900">
+                    <span class="flex items-start justify-between">
+                        <span class="flex flex-col gap-1">
+                            <span class="text-sm">
+                                سید مهدی موسوی معین
+                                <span class="rounded-lg px-3 py-1 text-white bg-red-500 text-xxs">خریدار</span>
+                            </span>
+                            <span class="text-xs text-gray-400">13 اسفند 1400</span>
+                        </span>
+
+                        <span class="text-sm flex items-center gap-1 text-emerald-600">
+
+                            <span>
+                                <button class="text-base">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                16
+                            </span>
+                        </span>
+                    </span>
+
+                    <p class="mt-2 text-xs text-justify leading-5">
+                        سلام این گوشی واقعا عالیه من هشت عدد برای خانواده خریدم و همه راضی بودن. از تک تکشون پرسیدم.
+                    </p>
+
+                    <div class="grid grid-cols-10 gap-2 items-center">
+                        <span class="col-span-1 text-center text-lg text-red-500">
+                            <i class="fa-regular fa-reply"></i>
+                        </span>
+                        <div class="col-span-9 p-2 mr-8 mt-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                            <span class="flex items-start justify-between">
+                                <span class="flex flex-col gap-1">
+                                    <span class="text-sm">
+                                        پاسخ ادمین
+                                    </span>
+
+                                </span>
+
+                                <span class="text-sm flex items-center gap-1 text-emerald-600">
+
+                                    <span>
+                                        <button class="text-base">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                        </button>
+                                    </span>
+                                    <span>
+                                        2
+                                    </span>
+                                </span>
+                            </span>
+
+                            <p class="mt-2 text-xs text-justify leading-5">
+                                تشکر از خرید شما
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 rounded-lg bg-white dark:bg-gray-900">
+                    <span class="flex items-start justify-between">
+                        <span class="flex flex-col gap-1">
+                            <span class="text-sm">
+                                داریوش نیک پندار
+                            </span>
+                            <span class="text-xs text-gray-400">13 اسفند 1400</span>
+                        </span>
+
+                        <span class="text-sm flex items-center gap-1 text-emerald-600">
+
+                            <span>
+                                <button class="text-base">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                </button>
+                            </span>
+                            <span>
+                                112
+                            </span>
+                        </span>
+                    </span>
+
+                    <p class="mt-2 text-xs text-justify leading-5">
+                        گرونه
+                        #نخریم_بگنده_ارزونش_کنن
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- comments ends -->
     </main>
 
     <footer class="bg-gray-100 dark:bg-gray-800 dark:text-white relative shadow-md z-10 flex flex-col mt-20">
@@ -627,7 +930,7 @@
     <!-- buy product button starts -->
 
     <section
-        class="fixed z-40 right-0 bottom-0 left-0 flex justify-between items-center shadow-lg md:hidden px-4 py-3 bg-white dark:bg-gray-900 dark:text-white">
+        class="fixed z-10 right-0 bottom-0 left-0 flex justify-between items-center shadow-lg md:hidden px-4 py-3 bg-white dark:bg-gray-900 dark:text-white">
 
         <span class="flex flex-col gap-y-2 text-xs xs:text-base">
             <span class="flex items-center gap-x-2">
