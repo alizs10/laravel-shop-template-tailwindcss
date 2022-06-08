@@ -602,6 +602,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0.5rem;
 }
 
+.-top-20{
+  top: -5rem;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -656,6 +660,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .col-span-9{
   grid-column: span 9 / span 9;
+}
+
+.col-span-5{
+  grid-column: span 5 / span 5;
 }
 
 .row-span-1{
@@ -757,6 +765,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 5rem;
 }
 
+.mt-24{
+  margin-top: 6rem;
+}
+
 .block{
   display: block;
 }
@@ -845,6 +857,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-1{
   height: 0.25rem;
+}
+
+.h-20{
+  height: 5rem;
 }
 
 .w-3\/4{
@@ -1227,6 +1243,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 0.5rem;
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1428,6 +1448,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-emerald-600{
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
+}
+
+.text-sky-600{
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1670,6 +1695,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(56 189 248 / var(--tw-text-opacity));
 }
 
+.dark .dark\:text-sky-600{
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-sky-200{
+  --tw-text-opacity: 1;
+  color: rgb(186 230 253 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .dark .dark\:hover\:bg-gray-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1725,6 +1765,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px){
+  .md\:-top-20{
+    top: -5rem;
+  }
+
+  .md\:-top-16{
+    top: -4rem;
+  }
+
   .md\:col-span-8{
     grid-column: span 8 / span 8;
   }
@@ -1743,6 +1791,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:col-span-4{
     grid-column: span 4 / span 4;
+  }
+
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-5{
+    grid-column: span 5 / span 5;
   }
 
   .md\:mx-2{
@@ -1768,6 +1824,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:h-2\/3{
     height: 66.666667%;
+  }
+
+  .md\:h-20{
+    height: 5rem;
+  }
+
+  .md\:h-16{
+    height: 4rem;
+  }
+
+  .md\:w-40{
+    width: 10rem;
   }
 
   .md\:grid-cols-10{
@@ -1803,6 +1871,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:text-lg{
     font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:leading-7{
     line-height: 1.75rem;
   }
 }
