@@ -562,15 +562,16 @@
                             انتخاب رنگ
                         </span>
 
-                        <div class="flex gap-2">
+                        <div class="flex gap-2" id="product-colors">
                             <span
                                 class="cursor-pointer text-xs rounded-lg px-2 py-1 border-2 border-emerald-500 flex items-center gap-2">
                                 <div class="rounded-full h-3 w-3 bg-emerald-500"></div>
                                 سبز
                             </span>
                             <span
-                                class="cursor-pointer text-xs rounded-lg px-2 py-1 border-2 border-red-500 flex items-center gap-2">
+                                class="cursor-pointer selected text-xs rounded-lg px-2 py-1 border-2 border-red-500 flex items-center gap-2">
                                 <i class="fa-regular fa-check text-lg text-black dark:text-white"></i>
+                                <div class="rounded-full h-3 w-3 bg-red-500 hidden"></div>
                                 قرمز
                             </span>
                             <span
@@ -768,11 +769,36 @@
                                 قاب پشتی از شیشه و دور بدنه فلزی
                             </span>
                         </li>
+                        <li class="grid grid-cols-6 hidden">
+                            <span class="col-span-2 p-2 bg-gray-100 dark:bg-gray-700 text-xxs">
+                                تراشه
+                            </span>
+                            <span class="col-span-4 p-2 bg-gray-50 dark:bg-gray-600 text-xs">
+                                Exynous 2200 Chipset
+                            </span>
+                        </li>
+                        <li class="grid grid-cols-6 hidden">
+                            <span class="col-span-2 p-2 bg-gray-100 dark:bg-gray-700 text-xxs">
+                               زمان معرفی
+                            </span>
+                            <span class="col-span-4 p-2 bg-gray-50 dark:bg-gray-600 text-xs">
+                               2022
+                            </span>
+                        </li>
+                        <li class="grid grid-cols-6 hidden">
+                            <span class="col-span-2 p-2 bg-gray-100 dark:bg-gray-700 text-xxs">
+                                تعداد سیمکارت
+                            </span>
+                            <span class="col-span-4 p-2 bg-gray-50 dark:bg-gray-600 text-xs">
+                               2 عدد
+                            </span>
+                        </li>
+                        
                         <li class="flex-center p-2 bg-gray-50 dark:bg-gray-600">
-                           <span class="flex gap-x-2 text-sky-500 dark:text-sky-400  text-xs">
-                               مشاهده کامل مشخصات کالا
-                            <i class="fa-light fa-angle-down"></i>
-                           </span>
+                            <span id="show-full-product-details" class="flex gap-x-2 cursor-pointer text-sky-500 dark:text-sky-400  text-xs">
+                                <span>مشاهده کامل مشخصات کالا</span>
+                                <i class="fa-light fa-angle-down"></i>
+                            </span>
                         </li>
                     </ol>
                 </div>
@@ -1001,6 +1027,8 @@
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/product-images-slider.js"></script>
+<script src="../js/product-color-selecter.js"></script>
+<script src="../js/product-details.js"></script>
 
 
 </html>
