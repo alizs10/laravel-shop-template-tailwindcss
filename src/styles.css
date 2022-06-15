@@ -37,3 +37,7 @@
 .ltr {
     direction: ltr;
 }
+
+.form-input {
+    @apply focus:outline-none bg-transparent p-2 sm:text-sm border-2 border-gray-300 dark:border-gray-800 rounded-lg
+}
