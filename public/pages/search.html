@@ -455,52 +455,61 @@
                         </button>
                     </div>
 
-                    <div class="py-2 px-4">
-                        <span onclick="toggleCategoryFilter(this)"
+                    <div id="category-filter" class="py-2 px-4">
+                        <span onclick="toggleCategoryFilter()"
                          class="flex justify-between items-center cursor-pointer">
                             <span>فیلتر دسته بندی</span>
                             <i class="fa fa-angle-left"></i>
                         </span>
-                        <div class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-10 flex flex-col gap-4">
+                        <div class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white dark:bg-gray-900 z-10 flex flex-col gap-4">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm mt-4 mr-4">فیلتر دسته بندی</span>
-                                <button class="ml-4 mt-4 text-xl" onclick="toggleFilters()">
+                                <button class="ml-4 mt-4 text-xl" onclick="toggleCategoryFilter()">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
 
                             <div class="flex flex-col gap-4 mx-4">
-                                <span class="flex items-center gap-2">
-                                    <i class="fa fa-angle-down text-sm"></i>
+                                <span id="cat-filter-0" onclick="toggleSubCategoryFilter(0)"
+                                 class="flex items-center cursor-pointer gap-2">
+                                    <i class="fa fa-angle-left text-sm"></i>
                                     <span class="text-xs">کالاهای دیجیتال</span>
                                 </span>
-                                <span class="flex items-center gap-2 mr-4">
-                                    <i class="fa fa-angle-down text-sm"></i>
+                                <span  id="cat-filter-1" data-parent-id="0"
+                                 onclick="toggleSubCategoryFilter(1)"
+                                 class="hidden flex items-center cursor-pointer gap-2 mr-4">
+                                    <i class="fa fa-angle-left text-sm"></i>
                                     <span class="text-xs">گوشی موبایل</span>
                                 </span>
-                                <span class="flex items-center gap-2 mr-8">
+                                <span data-parent-id="1"
+                                 onclick=""
+                                 class="hidden flex items-center cursor-pointer gap-2 mr-8">
                                     <span class="text-xs">گوشی های سامسونگ</span>
                                 </span>
-                                <span class="flex items-center gap-2 mr-8">
+                                <span data-parent-id="1"
+                                 onclick=""
+                                 class="hidden flex items-center cursor-pointer gap-2 mr-8">
                                     <span class="text-xs">گوشی های شیایومی</span>
                                 </span>
-                                <span class="flex items-center gap-2 mr-8">
+                                <span data-parent-id="1"
+                                 onclick=""
+                                 class="hidden flex items-center cursor-pointer gap-2 mr-8">
                                     <span class="text-xs">گوشی های اپل</span>
                                 </span>
                             </div>
 
                         </div>
                     </div>
-                    <div class="py-2 px-4">
-                        <span onclick="togglePriceFilter(this)"
+                    <div id="price-filter" class="py-2 px-4">
+                        <span onclick="togglePriceFilter()"
                          class="flex justify-between items-center cursor-pointer">
                             <span>فیلتر قیمت</span>
                             <i class="fa fa-angle-left"></i>
                         </span>
-                        <div class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-10 flex flex-col gap-4">
+                        <div class="hidden fixed top-0 right-0 bottom-0 left-0 bg-white dark:bg-gray-900 z-10 flex flex-col gap-4">
                             <div class="flex justify-between items-center">
                                 <span class="text-sm mt-4 mr-4">فیلتر قیمت</span>
-                                <button class="ml-4 mt-4 text-xl" onclick="toggleFilters()">
+                                <button class="ml-4 mt-4 text-xl" onclick="togglePriceFilter()">
                                     <i class="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
@@ -508,11 +517,11 @@
                             <div class="flex flex-col gap-4 mx-4">
                                 <div class="flex flex-col gap-2">
                                     <label for="">از قیمت</label>
-                                    <input class="form-input" type="text" name="" id="">
+                                    <input class="form-input" type="text" value="0" name="" id="">
                                 </div>
                                 <div class="flex flex-col gap-2">
                                     <label for="">تا قیمت</label>
-                                    <input class="form-input" type="text" name="" id="">
+                                    <input class="form-input" type="text" value="100000000" name="" id="">
                                 </div>
                             </div>
 
@@ -521,10 +530,10 @@
                                     محدوده قیمت
                                 </span>
 
-                                <div class="rounded-lg bg-gray-200 h-5">
+                                <div class="rounded-lg bg-gray-200 dark:bg-gray-700 h-5">
                                     <div class="bg-red-500 h-5 w-fit flex rounded-full">
-                                        <span class="rounded-full w-5 h-5 bg-white"></span>
-                                        <span class="rounded-full w-5 h-5 mr-10 bg-white"></span>
+                                        <span id="price-filter-start-btn" class="rounded-full w-5 h-5 bg-white cursor-pointer"></span>
+                                        <span class="rounded-full w-5 h-5 mr-10 bg-white cursor-pointer"></span>
                                     </div>
                                 </div>
                             </div>
@@ -563,7 +572,7 @@
                         <span class="flex justify-between items-center text-xs xs:text-sm">
                             <span>فیلتر ها:</span>
                             <button onclick="toggleFilters()"
-                            class="w-10 h-10 text-gray-700 dark:text-gray-200 rounded-lg text-xl hover-transition hover:bg-gray-100 dark:hover:bg-gray-700">
+                            class="w-10 h-10 text-gray-700 dark:text-gray-200 rounded-lg text-xl hover-transition hover:bg-gray-200 dark:hover:bg-gray-700">
                                 <i class="fa-regular fa-filter"></i>
                             </button>
                         </span>
@@ -666,20 +675,6 @@
                 </section>
                 <!-- search results ends -->
             </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         </section>
@@ -785,7 +780,6 @@
 <script src="../js/sidebar.js"></script>
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
-<script src="../js/slidershow.js"></script>
 <script src="../js/products.js"></script>
 <script src="../js/search-page.js"></script>
 
