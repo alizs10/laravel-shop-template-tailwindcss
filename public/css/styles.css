@@ -594,6 +594,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: -2.5rem;
 }
 
+.-top-2{
+  top: -0.5rem;
+}
+
+.right-2{
+  right: 0.5rem;
+}
+
 .bottom-4{
   bottom: 1rem;
 }
@@ -622,12 +630,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 0;
 }
 
-.z-20{
-  z-index: 20;
-}
-
 .z-40{
   z-index: 40;
+}
+
+.z-20{
+  z-index: 20;
 }
 
 .col-span-1{
@@ -863,6 +871,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.25rem;
 }
 
+.max-h-\[calc\(100vh_-_14rem\)\]{
+  max-height: calc(100vh - 14rem);
+}
+
 .w-10{
   width: 2.5rem;
 }
@@ -982,12 +994,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-10{
-  grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-10{
+  grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
 .grid-rows-6{
@@ -1168,19 +1180,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
-.border-emerald-600{
+.border-red-500{
   --tw-border-opacity: 1;
-  border-color: rgb(5 150 105 / var(--tw-border-opacity));
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .border-emerald-500{
   --tw-border-opacity: 1;
   border-color: rgb(16 185 129 / var(--tw-border-opacity));
-}
-
-.border-red-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .border-blue-500{
@@ -1240,11 +1247,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-gray-500\/70{
@@ -1468,11 +1470,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-emerald-600{
-  --tw-text-opacity: 1;
-  color: rgb(5 150 105 / var(--tw-text-opacity));
-}
-
 .text-sky-400{
   --tw-text-opacity: 1;
   color: rgb(56 189 248 / var(--tw-text-opacity));
@@ -1501,6 +1498,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-emerald-700{
   --tw-text-opacity: 1;
   color: rgb(4 120 87 / var(--tw-text-opacity));
+}
+
+.text-emerald-600{
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1714,11 +1716,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
-.dark .dark\:border-emerald-400{
-  --tw-border-opacity: 1;
-  border-color: rgb(52 211 153 / var(--tw-border-opacity));
-}
-
 .dark .dark\:bg-gray-800{
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1762,11 +1759,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:text-gray-400{
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.dark .dark\:text-emerald-400{
-  --tw-text-opacity: 1;
-  color: rgb(52 211 153 / var(--tw-text-opacity));
 }
 
 .dark .dark\:text-emerald-600{
@@ -1882,12 +1874,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 6 / span 6;
   }
 
-  .md\:col-span-4{
-    grid-column: span 4 / span 4;
-  }
-
   .md\:col-span-1{
     grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-4{
+    grid-column: span 4 / span 4;
   }
 
   .md\:col-span-5{
@@ -1927,12 +1919,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 4rem;
   }
 
-  .md\:w-40{
-    width: 10rem;
-  }
-
   .md\:w-2\/3{
     width: 66.666667%;
+  }
+
+  .md\:w-40{
+    width: 10rem;
   }
 
   .md\:grid-cols-10{
@@ -1961,16 +1953,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.25rem;
   }
 
-  .md\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .md\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1979,6 +1961,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .md\:text-4xl{
