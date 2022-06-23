@@ -436,13 +436,13 @@
             <i class="fa-light fa-angles-left text-xs md:text-sm"></i>
             <span href="" class="text-xs xs:text-sm md:text-base text-red-500">پروفایل</span>
             <i class="fa-light fa-angles-left text-xs md:text-sm"></i>
-            <span href="" class="text-xs xs:text-sm md:text-base text-red-500">لیست علاقه مندی ها</span>
+            <span href="" class="text-xs xs:text-sm md:text-base text-red-500">لیست سفارشات</span>
 
 
         </section>
         <!-- breadcrumb ends -->
 
-        <!-- favorites starts -->
+        <!-- orders starts -->
         <section class="grid grid-cols-9 gap-4 mt-4">
 
             <div id="profile-section"
@@ -464,7 +464,7 @@
                         </button>
                     </li>
                     <li>
-                        <button class="flex items-center gap-3 py-2">
+                        <button onclick="profileBack()" class="flex items-center gap-3 py-2 text-red-500">
                             <i class="fa-light fa-list-alt text-sm xs:text-2xl"></i>
                             <span class="text-xs xs:text-base">
                                 لیست سفارشات
@@ -472,8 +472,7 @@
                         </button>
                     </li>
                     <li>
-                        <button onclick="profileBack()"
-                         class="flex items-center gap-3 py-2 text-red-500">
+                        <button class="flex items-center gap-3 py-2">
                             <i class="fa-light fa-heart text-sm xs:text-2xl"></i>
                             <span class="text-xs xs:text-base">
                                 لیست علاقه مندی ها
@@ -499,219 +498,187 @@
                 </ul>
 
             </div>
-            <div id="favorites-section"
+            <div id="orders-section"
                 class="lg:block col-span-9 lg:col-span-7 lg:h-fit flex flex-col gap-2 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
                 <span class="flex items-center gap-3">
                     <button onclick="profileBack()" class="lg:hidden text-lg">
                         <i class="fa fa-arrow-right"></i>
                     </button>
                     <span class="text-sm xs:text-base text-gray-500 dark:text-gray-400">
-                        لیست علاقه مندی ها
+                        لیست سفارشات
                     </span>
                 </span>
 
-                <!-- favorites products starts -->
+                <div class="grid grid-cols-3 xs:grid-cols-5 mt-2 bg-white dark:bg-gray-700 rounded-lg overflow-hidden">
+                    <div
+                        class="col-span-1 px-3 py-2 flex-center gap-2 text-sm cursor-pointer hover-transition hover:bg-gray-200 hover:dark:bg-gray-900">
+                        <span class="text-lg lg:text-xl xs:text-3xl">
+                            <i class="fa-light fa-clock"></i>
+                        </span>
+                        <span class="hidden lg:block">در انتظار پرداخت</span>
+                        <span class="w-6 h-6 bg-red-500 flex-center text-white text-xs rounded-lg">۱</span>
+                    </div>
+                    <div
+                        class="col-span-1 px-3 py-2 flex-center gap-2 text-sm cursor-pointer hover-transition hover:bg-gray-200 hover:dark:bg-gray-900">
+                        <span class="text-lg lg:text-xl xs:text-3xl text-blue-600 dark:text-blue-500">
+                            <i class="fa-light fa-loader"></i>
+                        </span>
+                        <span class="hidden lg:block">در حال پردازش</span>
+                       
+                    </div>
+                    <div
+                        class="col-span-1 px-3 py-2 flex-center gap-2 text-sm cursor-pointer hover-transition hover:bg-gray-200 hover:dark:bg-gray-900">
+                        <span class="text-lg lg:text-xl xs:text-3xl text-emerald-600">
+                            <i class="fa-light fa-hexagon-check"></i>
+                        </span>
+                        <span class="hidden lg:block">پرداخت شده</span>
+                        <span class="w-6 h-6 bg-red-500 flex-center text-white text-xs rounded-lg">۲</span>
+                    </div>
+                    
+                    <div
+                        class="col-span-1 px-3 py-2 flex-center gap-2 text-sm cursor-pointer hover-transition hover:bg-gray-200 hover:dark:bg-gray-900">
+                        <span class="text-lg lg:text-xl xs:text-3xl text-red-500">
+                            <i class="fa-light fa-hexagon-xmark"></i>
+                        </span>
+                        <span class="hidden lg:block">لغو شده</span>
+           
+                    </div>
+                    <div
+                        class="col-span-1 px-3 py-2 flex-center gap-2 text-sm cursor-pointer hover-transition hover:bg-gray-200 hover:dark:bg-gray-900">
+                        <span class="text-lg lg:text-xl xs:text-3xl text-orange-500">
+                            <i class="fa-light fa-arrow-rotate-left"></i>
+                        </span>
+                        <span class="hidden lg:block">مرجوعی</span>
+                        
+                    </div>
+                </div>
 
-                <section class="grid grid-cols-8 gap-2 mt-4">
-
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
+                <!-- orders list starts -->
+                <div class="flex flex-col gap-2 mt-2">
+                    <div class="flex flex-col gap-2 rounded-lg bg-white dark:bg-gray-700 shadow-md p-3">
+                        <span class="flex justify-between pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <span class="flex gap-2 text-xxxs xs:text-xs text-gray-500 dark:text-gray-400">
+                                <span>۲۳ فروردین ۱۳۴۰۱</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
                                 </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
+                                <span>LSC-4578965</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
+                                </span>
+                                <span class="text-blue-600 dark:text-blue-500">در حال پردازش</span>
                             </span>
+                        </span>
 
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
+                        <div class="grid grid-cols-6 xs:grid-cols-10 gap-2 pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs xs:text-sm">۲۳۲,۰۰۰ تومان</span>
+
+                            <div class="flex gap-2">
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-gray-500" href="">فاکتور</a>
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-emerald-600" href="">جزییات</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
+                    <div class="flex flex-col gap-2 rounded-lg bg-white dark:bg-gray-700 shadow-md p-3">
+                        <span class="flex justify-between pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <span class="flex gap-2 text-xxxs xs:text-xs text-gray-500 dark:text-gray-400">
+                                <span>۲۳ فروردین ۱۳۴۰۱</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
                                 </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
+                                <span>LSC-4578965</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
+                                </span>
+                                <span class="text-blue-600 dark:text-blue-500">در حال پردازش</span>
                             </span>
+                        </span>
 
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
+                        <div class="grid grid-cols-6 xs:grid-cols-10 gap-2 pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs xs:text-sm">۲۳۲,۰۰۰ تومان</span>
+
+                            <div class="flex gap-2">
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-gray-500" href="">فاکتور</a>
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-emerald-600" href="">جزییات</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
+                    <div class="flex flex-col gap-2 rounded-lg bg-white dark:bg-gray-700 shadow-md p-3">
+                        <span class="flex justify-between pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <span class="flex gap-2 text-xxxs xs:text-xs text-gray-500 dark:text-gray-400">
+                                <span>۲۳ فروردین ۱۳۴۰۱</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
                                 </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
+                                <span>LSC-4578965</span>
+                                <span class="flex-center text-xxxs">
+                                    <i class="fa-solid fa-circle"></i>
+                                </span>
+                                <span class="text-blue-600 dark:text-blue-500">در حال پردازش</span>
                             </span>
+                        </span>
 
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
+                        <div class="grid grid-cols-6 xs:grid-cols-10 gap-2 pb-2 border-b-2 boder-gray-100 dark:border-gray-600">
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                            <div class="col-span-2 lg:col-span-1 rounded-lg overflow-hidden">
+                                <img src="../images/product-2.webp" alt="">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs xs:text-sm">۲۳۲,۰۰۰ تومان</span>
+
+                            <div class="flex gap-2">
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-gray-500" href="">فاکتور</a>
+                                <a class="px-3 py-2 xs:px-4 xs:py-3 text-xs rounded-lg text-white bg-emerald-600" href="">جزییات</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
-                                </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
-                            </span>
-
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
-                                </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
-                            </span>
-
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
-                                </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
-                            </span>
-
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
-                        <a href="">
-                            <img class="w-full" src="../images/product-2.webp" alt="">
-                        </a>
-                        <div class="flex justify-between items-center">
-                            <span class="flex flex-col gap-y-1 text-xs">
-                                <span class="flex gap-x-2 items-center">
-                                    <span class="line-through">232,000</span>
-                                    <div class="h-7 w-7 rounded-lg bg-red-600 text-white flex-center text-xs">
-                                        2%</div>
-                                </span>
-                                <span class="text-red-500 font-bold">212,000</span>
-                                <span class="text-red-500 font-bold">تومان</span>
-                            </span>
-
-                            <div class="flex flex-col items-center gax-y-2">
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
-                                <button
-                                    class="text-gray-700 w-10 h-10 rounded-lg text-xl hover-transition hover:bg-gray-200">
-                                    <i class="fa-solid fa-cart-circle-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </section>
-                <!-- favorites products ends -->
+                </div>
+                <!-- orders list ends -->
 
             </div>
 
         </section>
-        <!-- favorites ends -->
+        <!-- orders ends -->
 
 
     </main>
@@ -796,7 +763,8 @@
 
     </footer>
 
-  
+
+
     <!-- background blur starts -->
     <div id="blur-back" onclick="toggleSidebar()"
         class="hidden lg:hidden fixed top-0 bottom-0 left-0 right-0 bg-gray-500/70 z-20 transition-all duration-300">
@@ -811,6 +779,6 @@
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/products.js"></script>
-<script src="../js/favorites-page.js"></script>
+<script src="../js/orders-page.js"></script>
 
 </html>
