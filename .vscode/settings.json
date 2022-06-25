@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5722
+    "liveServer.settings.port": 5722,
+    "editor.cursorSmoothCaretAnimation": true
 }
