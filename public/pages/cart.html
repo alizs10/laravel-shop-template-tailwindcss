@@ -443,7 +443,7 @@
 
 
             <div
-                class="col-span-9 md:col-span-6 lg:col-span-7 lg:h-fit flex flex-col gap-2 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                class="col-span-9 md:col-span-6 lg:col-span-6 lg:h-fit flex flex-col gap-2 p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
                 <span class="flex items-center gap-3">
                     <span class="text-sm xs:text-base text-gray-500 dark:text-gray-400">
                         سبد خرید شما
@@ -463,20 +463,24 @@
                                 <img src="../images/product-2.webp" alt="">
                             </a>
 
-                            <div class="p-1 rounded-lg bg-gray-200 dark:bg-gray-500 grid grid-cols-7">
-                                <button
+                            <div class="p-1 lg:mx-4 rounded-lg border-2 border-gray-200 dark:border-gray-500 grid grid-cols-7">
+                                <button id="cart-plus-btn" onclick="cartPlus(1)"
                                     class="col-span-2 bg-red-500 shadow-md rounded-lg h-6 xs:h-10 text-xxs xs:text-sm flex-center text-white">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                                 <div class="col-span-3">
                                     <input class="w-full h-full bg-transparent text-center focus:outline-none"
-                                        type="text" name="quantity" value="۰" id="" readonly>
+                                        type="text" name="quantity" id="cart-product-1" value="۱" min="1" id="" readonly>
                                 </div>
-                                <button
+                                <button id="cart-minus-btn" onclick="cartMinus(1)"
                                     class="col-span-2 bg-red-500 shadow-md rounded-lg h-6 xs:h-10 text-xxs xs:text-sm flex-center text-white">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
                             </div>
+                            <button class="flex gap-2 text-xxs xs:text-xs flex-center text-gray-500 dark:text-gray-400">
+                                <i class="fa-light fa-trash-alt"></i>
+                                حذف از سبدخرید
+                            </button>
                         </div>
 
                         <div class="col-span-5 xs:col-span-6 lg:col-span-7 flex flex-col gap-2">
@@ -548,6 +552,8 @@
                                     ۴۲۸٬۲۰۰ تومان
                                 </span>
                             </span>
+
+                           
                         </div>
 
                     </div>
@@ -558,7 +564,7 @@
             </div>
 
             <div
-                class="col-span-9 md:col-span-3 lg:col-span-2 text-xs md:text-xxs flex flex-col gap-2 h-fit p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                class="col-span-9 md:col-span-3 lg:col-span-3 text-xs md:text-xxs lg:text-xs flex flex-col gap-2 h-fit p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
 
                 <span class="flex justify-between items-center">
                     <span>جمع سبد خرید شما</span>
@@ -571,7 +577,7 @@
                 </span>
 
                 <div class="fixed drop-shadow-lg right-0 bottom-0 left-0 z-30 md:z-0 flex justify-between items-center md:block md:static bg-gray-200 dark:bg-gray-800 md:bg-transparent p-3 md:p-0">
-                    <span class="flex flex-col md:flex-row gap-2 md:justify-between items-center text-xxs xs:text-xs">
+                    <span class="flex flex-col md:flex-row gap-2 md:justify-between items-center text-xxs xs:text-xs md:text-xxs lg:text-xs">
                         <span>مبلغ پرداختی</span>
                         <span>۴۰۱٬۲۰۰ تومان</span>
                     </span>
@@ -777,6 +783,7 @@
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
 <script src="../js/products.js"></script>
+<script src="../js/cart-page.js"></script>
 
 
 </html>
