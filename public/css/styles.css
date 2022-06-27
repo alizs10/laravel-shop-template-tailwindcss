@@ -614,6 +614,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   bottom: 0.5rem;
 }
 
+.-top-6{
+  top: -1.5rem;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -707,6 +711,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mr-4{
@@ -871,6 +880,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 5rem;
 }
 
+.h-4{
+  height: 1rem;
+}
+
 .h-1{
   height: 0.25rem;
 }
@@ -933,6 +946,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-12{
   width: 3rem;
+}
+
+.w-4\/5{
+  width: 80%;
 }
 
 .shrink{
@@ -1133,6 +1150,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap;
 }
 
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -1294,6 +1315,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-yellow-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-clip-padding{
@@ -1782,6 +1808,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:bg-gray-600{
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-blue-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:text-white{
