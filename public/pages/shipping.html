@@ -434,19 +434,19 @@
             <div class="my-8 col-span-9 flex-center">
                 <div class="flex justify-between items-center w-4/5 h-4 rounded-full bg-gray-100 dark:bg-gray-800">
                     <span class="rounded-full flex-center bg-blue-600 dark:bg-blue-500 w-10 h-10 relative">
-                        <span class="text-xs absolute -top-6 whitespace-nowrap">
+                        <span class="text-xxs xs:text-xs absolute -top-6 whitespace-nowrap">
                             اطلاعات ارسال
                         </span>
                         <i class="fa-regular fa-pen text-xs text-white"></i>
                     </span>
                     <span class="rounded-full flex-center bg-gray-100 dark:bg-gray-800 w-10 h-10 relative">
-                        <span class="text-xs absolute -top-6 whitespace-nowrap">
+                        <span class="text-xxs xs:text-xs absolute -top-6 whitespace-nowrap">
                             پرداخت
                         </span>
                         <i class="fa-regular fa-flag text-xs text-gray-500 dark:text-gray-400"></i>
                     </span>
                     <span class="rounded-full flex-center bg-gray-100 dark:bg-gray-800 w-10 h-10 relative">
-                        <span class="text-xs absolute -top-6 whitespace-nowrap">
+                        <span class="text-xxs xs:text-xs absolute -top-6 whitespace-nowrap">
                             اتمام خرید و ارسال
                         </span>
                         <i class="fa-regular fa-flag text-xs text-gray-500 dark:text-gray-400"></i>
@@ -470,29 +470,29 @@
                 <div class="flex flex-col gap-2 mt-2">
                     <div
                         class="w-full flex flex-col gap-2 leading-6 rounded-lg bg-white dark:bg-gray-700 shadow-md p-3">
-                        <span class="text-sm">
+                        <span class="text-xs xs:text-sm">
                             <i class="fa-light fa-city"></i>
                             خوزستان، اهواز</span>
                         <span class="flex gap-2 text-sm">
                             <i class="fa-light fa-map-pin"></i>
                             <span>میدان امام رضا، خیابان شهید اسلام، کوچه نرگس پلاک ۶۷</span>
                         </span>
-                        <span class="text-sm">
+                        <span class="text-xs xs:text-sm">
                             <i class="fa-light fa-mailbox"></i>
                             کدپستی: ۶۴۶۲۰۵۸۹۹
                         </span>
-                        <span class="text-sm">
+                        <span class="text-xs xs:text-sm">
                             <i class="fa-light fa-user"></i>
                             نام تحویل گیرنده: محمدحسین تقی زاده
                         </span>
-                        <span class="text-sm">
+                        <span class="text-xs xs:text-sm">
                             <i class="fa-light fa-mobile"></i>
                             موبایل تحویل گیرنده: ۰۹۱۲۳۴۵۶۹۸۷</span>
 
                         <div class="flex justify-end">
                             <div class="flex items-center gap-x-3">
 
-                                <button onclick="setDefaultAddress(this)"
+                                <button onclick="selectAddress(this)"
                                     class="px-3 py-2 border-2 flex-center gap-2 text-xs rounded-lg text-red-500 border-red-500">
                                     انتخاب
                                 </button>
@@ -523,7 +523,7 @@
                         <div class="flex justify-end">
                             <div class="flex items-center gap-x-3">
 
-                                <button onclick="setDefaultAddress(this)"
+                                <button onclick="selectAddress(this)"
                                     class="px-3 py-2 border-2 flex-center gap-2 text-xs rounded-lg text-red-500 border-red-500">
                                     انتخاب
                                 </button>
@@ -538,8 +538,9 @@
                     انتخاب شیوه ارسال
                 </span>
 
-                <div class="grid grid-cols-3 gap-2">
-                    <div class="rounded-lg cursor-pointer shadow-md p-3 bg-red-500 text-white flex flex-col gap-2">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                    <div onclick="selectDelivery(this)"
+                     class="col-span-1 rounded-lg cursor-pointer shadow-md p-3 selected-delivery bg-red-500 text-white flex flex-col gap-2">
                         <span class="flex gap-2">
                             <i class="fa-light fa-truck-bolt text-base"></i>
                             <span class="text-xs">پست پیشتاز</span>
@@ -550,7 +551,8 @@
                         </span>
                         <span class="text-sm">۳۵,۰۰۰ تومان</span>
                     </div>
-                    <div class="rounded-lg cursor-pointer shadow-md p-3 bg-gray-200 dark:bg-gray-700 flex flex-col gap-2">
+                    <div onclick="selectDelivery(this)"
+                     class="col-span-1 rounded-lg cursor-pointer shadow-md p-3 bg-gray-200 dark:bg-gray-700 flex flex-col gap-2">
                         <span class="flex gap-2">
                             <i class="fa-light fa-truck-bolt text-base"></i>
                             <span class="text-xs">چاپار</span>
@@ -767,6 +769,6 @@
 <script src="../js/sidebar.js"></script>
 <script src="../js/popups.js"></script>
 <script src="../js/search.js"></script>
-<script src="../js/addresses-page.js"></script>
+<script src="../js/shipping-page.js"></script>
 
 </html>
