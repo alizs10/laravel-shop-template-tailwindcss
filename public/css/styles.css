@@ -889,6 +889,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 0.75rem;
 }
 
+.h-2{
+  height: 0.5rem;
+}
+
 .h-4{
   height: 1rem;
 }
@@ -1319,6 +1323,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
+.bg-green-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.bg-green-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .bg-blue-600{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -1473,6 +1487,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   letter-spacing: -0.01em;
 }
 
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1583,6 +1602,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-orange-500{
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity));
+}
+
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .underline{
@@ -1831,6 +1855,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-blue-500{
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
@@ -1869,6 +1903,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .dark .dark\:text-blue-500{
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-green-400{
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .dark .dark\:hover\:bg-gray-800:hover{
@@ -2058,6 +2107,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 66.666667%;
   }
 
+  .md\:h-3{
+    height: 0.75rem;
+  }
+
   .md\:h-16{
     height: 4rem;
   }
@@ -2150,6 +2203,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-xxs{
     font-size: 10px;
     letter-spacing: -0.01em;
+  }
+
+  .md\:text-9xl{
+    font-size: 8rem;
+    line-height: 1;
   }
 
   .md\:text-6xl{
