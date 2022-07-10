@@ -470,28 +470,29 @@
                             </div>
 
                             <div class="flex flex-col gap-4 mx-4 lg:mt-4">
-                                <span id="cat-filter-0" onclick="toggleSubCategoryFilter(0)"
-                                    class="flex items-center cursor-pointer gap-2">
-                                    <i class="fa fa-angle-left text-sm"></i>
-                                    <span class="text-xs">کالاهای دیجیتال</span>
-                                </span>
-                                <span id="cat-filter-1" data-parent-id="0" onclick="toggleSubCategoryFilter(1)"
-                                    class="hidden flex items-center cursor-pointer gap-2 mr-4">
-                                    <i class="fa fa-angle-left text-sm"></i>
-                                    <span class="text-xs">گوشی موبایل</span>
-                                </span>
-                                <span data-parent-id="1" onclick=""
-                                    class="hidden flex items-center cursor-pointer gap-2 mr-8">
-                                    <span class="text-xs">گوشی های سامسونگ</span>
-                                </span>
-                                <span data-parent-id="1" onclick=""
-                                    class="hidden flex items-center cursor-pointer gap-2 mr-8">
-                                    <span class="text-xs">گوشی های شیایومی</span>
-                                </span>
-                                <span data-parent-id="1" onclick=""
-                                    class="hidden flex items-center cursor-pointer gap-2 mr-8">
-                                    <span class="text-xs">گوشی های اپل</span>
-                                </span>
+                                <a href="" class="flex items-center cursor-pointer gap-2">
+                                    <i class="fa-light fa-grid-2 text-sm"></i>
+                                    <span class="flex justify-between items-center w-full">
+                                        <span class="text-xs">همه دسته بندی ها</span>
+                                        <i class="fa-solid fa-check text-red-500 text-lg"></i>
+                                    </span>
+                                </a>
+                                <a href="" class="flex items-center cursor-pointer gap-2 mr-4">
+                                    <i class="fa fa-angle-down text-sm"></i>
+                                    <span class="flex justify-between items-center w-full">
+                                        <span class="text-xs">گوشی موبایل</span>
+                                      
+                                    </span>
+                                </a>
+                                <a href="" class="flex items-center cursor-pointer gap-2 mr-4">
+                                    <i class="fa fa-angle-down text-sm"></i>
+                                    <span class="flex justify-between items-center w-full">
+                                        <span class="text-xs">پوشاک</span>
+                                      
+                                    </span>
+                                </a>
+                        
+
                             </div>
 
                         </div>
@@ -513,12 +514,13 @@
                             <div class="flex flex-col gap-4 mx-4 lg:mx-0 lg:mt-4">
                                 <div class="flex flex-col gap-2">
                                     <label for="">از قیمت</label>
-                                    <input class="form-input dark:border-gray-700" type="text" name="start-price" value="0" min="0">
+                                    <input class="form-input dark:border-gray-700" type="text" name="start-price"
+                                        value="0" min="0">
                                 </div>
                                 <div class="flex flex-col gap-2">
                                     <label for="">تا قیمت</label>
-                                    <input class="form-input dark:border-gray-700" type="text" name="end-price" value="100000000"
-                                        max="100000000">
+                                    <input class="form-input dark:border-gray-700" type="text" name="end-price"
+                                        value="100000000" max="100000000">
                                 </div>
                             </div>
 
@@ -554,16 +556,19 @@
 
                 </div>
 
-                <a class="fixed lg:static lg:mx-2 lg:rounded-lg lg:mt-2 text-sm xs:text-base bottom-0 right-0 left-0 block text-center py-2 xs:py-3 bg-red-500 text-white"
-                    href="">اعمال فیلتر</a>
-
+                <div class="mx-2">
+                    <button
+                        class="fixed lg:static lg:w-full lg:rounded-lg lg:mt-2 text-sm xs:text-base bottom-0 right-0 left-0 block text-center py-2 xs:py-3 bg-red-500 text-white">اعمال
+                        فیلتر</button>
+                </div>
             </section>
 
             <!-- filters ends -->
 
 
 
-            <section class="col-span-9 lg:col-span-7 flex flex-col gap-3 rounded-lg bg-gray-100 dark:bg-gray-800 shadow-lg p-3">
+            <section
+                class="col-span-9 lg:col-span-7 flex flex-col gap-3 rounded-lg bg-gray-100 dark:bg-gray-800 shadow-lg p-3">
                 <div class="flex flex-col gap-2 pb-2 border-b border-white">
                     <span class="flex justify-between items-center text-xxs xs:text-xs">
                         <span>نتایج جستجو برای "موبایل سامسونگ"</span>
@@ -590,7 +595,8 @@
 
                 <section class="grid grid-cols-8 gap-2">
 
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -617,7 +623,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -644,7 +651,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -671,7 +679,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -698,7 +707,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -725,7 +735,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
@@ -752,7 +763,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
+                    <div
+                        class="col-span-8 xs:col-span-4 md:col-span-2 flex flex-col gap-y-2 p-2 rounded-lg bg-white text-black">
                         <a href="">
                             <img class="w-full" src="../images/product-2.webp" alt="">
                         </a>
