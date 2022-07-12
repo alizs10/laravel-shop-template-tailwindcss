@@ -5,32 +5,32 @@ function toggleSidebar() {
 }
 
 
-$('#toggleCategories').on('mouseenter', function () {
+$('#toggleCategories').hover(function () {
     // check if screen is large
 
     if (window.innerWidth > 1024) {
         categories.addClass('lg:grid');
-        $('#blur-back').toggleClass('hidden lg:hidden')
+        $('#blur-back').removeClass('hidden lg:hidden')
+        $("#blur-back").hover(function () {
+            categories.removeClass('lg:grid')
+            $('#blur-back').addClass('hidden lg:hidden')
+        })
+       
     }
 });
 
 $('#toggleCategories').on('mouseleave', function (event) {
     var target = $(event.toElement)[0];
+    
     if (window.innerWidth > 1024 && categories.find(target).length == 0) {
         categories.removeClass('lg:grid')
-        $('#blur-back').toggleClass('hidden lg:hidden')
+        $('#blur-back').addClass('hidden lg:hidden')
     }
 
 });
 
 
 
-categories.on('mouseleave', function () {
-    if (window.innerWidth > 1024) {
-        categories.removeClass('lg:grid')
-        $('#blur-back').toggleClass('hidden lg:hidden')
-    }
-})
 
 $('.cat').hover(function () {
     let id = $(this).attr('id');
