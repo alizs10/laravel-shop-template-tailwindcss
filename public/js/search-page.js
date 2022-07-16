@@ -1,3 +1,8 @@
+function checkboxHandler(btn) {
+   var checkboxId = $(btn).attr('id')
+   $('label[for=' + checkboxId + ']').find('span').toggleClass('bg-white bg-red-500')
+}
+
 function toggleFilters() {
    $('body').toggleClass('overflow-hidden');
    $('#filters').toggleClass('hidden');
@@ -13,8 +18,25 @@ function toggleCategoryFilter() {
    $('#category-filter').children().eq(0).find('svg').toggleClass('fa-angle-left fa-angle-down');
 }
 
+function toggleBrandFilter() {
+   $('#brand-filter').children().eq(1).toggleClass('hidden');
+   $('#brand-filter').children().eq(0).find('svg').toggleClass('fa-angle-left fa-angle-down');
+}
+
 function toggleProductsExistFilter(btn) {
-   $(btn).parent().toggleClass('justify-end bg-gray-200 dark:bg-gray-700 bg-red-500')
+   if ($(btn).hasClass('active')) {
+      $(btn).animate({ "margin-right": "0" }, 200, null, function () {
+         $(btn).removeClass('active')
+         $(btn).parent().toggleClass('bg-gray-200 dark:bg-gray-700 bg-red-500')
+     })
+   }else {
+
+   $(btn).animate({ "margin-right": "1.25rem" }, 200, null, function () {
+      $(btn).addClass('active')
+      $(btn).parent().toggleClass('bg-gray-200 dark:bg-gray-700 bg-red-500')
+  })
+}
+   
 }
 
 
