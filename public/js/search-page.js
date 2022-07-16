@@ -10,8 +10,6 @@ function toggleFilters() {
 function togglePriceFilter() {
    $('#price-filter').children().eq(1).toggleClass('hidden');
    $('#price-filter').children().eq(0).find('svg').toggleClass('fa-angle-left fa-angle-down');
-
-
 }
 function toggleCategoryFilter() {
    $('#category-filter').children().eq(1).toggleClass('hidden');
@@ -28,15 +26,15 @@ function toggleProductsExistFilter(btn) {
       $(btn).animate({ "margin-right": "0" }, 200, null, function () {
          $(btn).removeClass('active')
          $(btn).parent().toggleClass('bg-gray-200 dark:bg-gray-700 bg-red-500')
-     })
-   }else {
+      })
+   } else {
 
-   $(btn).animate({ "margin-right": "1.25rem" }, 200, null, function () {
-      $(btn).addClass('active')
-      $(btn).parent().toggleClass('bg-gray-200 dark:bg-gray-700 bg-red-500')
-  })
-}
-   
+      $(btn).animate({ "margin-right": "1.25rem" }, 200, null, function () {
+         $(btn).addClass('active')
+         $(btn).parent().toggleClass('bg-gray-200 dark:bg-gray-700 bg-red-500')
+      })
+   }
+
 }
 
 
